@@ -32,9 +32,6 @@ rotate (-90)
 
   var Day = now.day
   var Daypos = map(Day,1,31,90,0)
-  // var DayStart = color(255, 204, 102)
-  // var DayEnd = color(214, 125, 0)
-  // var DayC = lerpColor(DayStart,DayEnd,Day) 
 
   var Ss = now.season
   var SpringC = color(75, 232, 60)
@@ -42,9 +39,13 @@ rotate (-90)
   var AutumnC = color(240, 154, 34)
   var WinterC = color(209, 240, 255)
 
-  // var D = now.day
-  // var Dpos = map(D, 1,31,0,90)
-
+  // var Mo = color(0, 0, 0)
+  // var Tu = color(10, 0, 0)
+  // var We = color(20, 0, 0)
+  // var Th = color(30, 0, 0)
+  // var Fr = color(40, 0, 0)
+  // var St = color(50, 0, 0)
+  // var Su = color(60, 0, 0)
 
   //Seasons
   fill(Ss)
@@ -65,13 +66,35 @@ rotate (-90)
   arc(0,0,800,800,0,90,PIE)
 
   //Day of the month
+  // fill(Dd)
+  // if(Dd == 2) {
+  // fill(Mo) }
+  // else if(Dd == 3) {
+  // fill(Tu) }
+  // else if(Dd == 4) {
+  // fill(We) }
+  // else if(Dd == 5) {
+  // fill(Th) }
+  // else if(Dd == 6) {
+  // fill(Fr) }
+  // else if(Dd == 7) {
+  // fill(St) }
+  // else if(Dd == 1) {
+  // fill(Su) }
+
 push()
-translate(3,3)
-  strokeWeight(20)
-  stroke(200) //color dia
+translate(20,20)
+  strokeWeight(40)
+  stroke(200) //Day color
   rotate(Daypos)
-  line(0,0,388,0)
+  line(0,0,355,0)
 pop()
+
+//Total Arc
+  noFill()
+  stroke(100)
+  strokeWeight(6)
+  arc(0,0,800,800,0,90,PIE)
 
   //Hours
   fill(HrC)
@@ -108,14 +131,5 @@ push()
   rotate(Scpos)
   line(0,0,175,0)
 pop()
-
-
-
-
-  //Line
-  // strokeWeight(10)
-  // stroke(100)
-  // rotate(Dpos)
-  // line(0,0,300,0)
 
   }
