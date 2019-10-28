@@ -1,5 +1,7 @@
 ## Process
 
-Description of the contents of this folder, a prose description of your ideas for how to represent
-the nuclear testing time series, and links to external data sources you'll be incorporating into
-the project.
+// 1. Number of tests per year done by European contries between 1950 and 2000.
+
+// 2. Number of months of the year in which testings were executed by European contries between 1950 and 2000.
+
+// 3. Explosive power in kilotons produced by Eropean countries per decade between 1950 and 2000.
