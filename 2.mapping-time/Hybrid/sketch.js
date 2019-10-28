@@ -1,6 +1,6 @@
 
 function setup() {
-  createCanvas(600,600)
+  createCanvas(450,450)
   angleMode(DEGREES)
 
 }
@@ -8,7 +8,7 @@ function draw() {
 var now = clock()
 background (255)
 
-translate(100,500)
+translate(25,425)
 rotate (-90)
   
   //Progress
@@ -32,6 +32,9 @@ rotate (-90)
 
   var Day = now.day
   var Daypos = map(Day,1,31,90,0)
+  var DayStart = color(255, 223, 97)
+  var DayEnd = color(109, 54, 191)
+  var Dd = lerpColor(DayStart,DayEnd,now.progress.day)
 
   var Ss = now.season
   var SpringC = color(75, 232, 60)
@@ -82,10 +85,11 @@ rotate (-90)
   // else if(Dd == 1) {
   // fill(Su) }
 
+
 push()
 translate(20,20)
   strokeWeight(40)
-  stroke(200) //Day color
+  stroke(Dd) //Day color
   rotate(Daypos)
   line(0,0,355,0)
 pop()
@@ -97,7 +101,8 @@ pop()
   arc(0,0,800,800,0,90,PIE)
 
   //Hours
-  fill(HrC)
+  //fill(HrC)
+  fill(HrEnd)
   stroke(100)
   strokeWeight(6)
   arc(0,0,550,550,0,90,PIE)
@@ -109,7 +114,8 @@ push()
 pop()
 
   //Minutes
-  fill(MnC)
+  //fill(MnC)
+  fill(MnEnd)
   stroke(100)
   strokeWeight(6)
   arc(0,0,450,450,0,90,PIE)
@@ -121,7 +127,8 @@ push()
 pop()
 
   //Seconds
-  fill(ScC)
+  //fill(ScC)
+  fill(ScEnd)
   stroke(100)
   strokeWeight(6)
   arc(0,0,350,350,0,90,PIE)
