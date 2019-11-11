@@ -24,6 +24,7 @@ function setup(){
   var rowHeight = 25 // Row Letting
   var colWidth = 100 // Column With
 
+
 // Contries
   var x = 250 // Align Left Column
   var y = 75 // Align Height Column
@@ -57,44 +58,71 @@ function setup(){
 
 //// GRAPHIC
 
-push() // Plot Graph
+push() // Plot Area
 translate(40,200)
 fill('pink')
 rect(0,0,1000,600)
 
+for (var Gridx = 0; Gridx < 1000; Gridx += 1000 / 20) {
+for (var Gridy = 0; Gridy < 600; Gridy += 600 / 10) {
+	stroke(250);
+	strokeWeight(1);
+	line(Gridx, 0, Gridx, 600);
+	line(0, Gridy, 1000, Gridy);
+		}
+	}
+
 // Contries
-  var x2 = 150 
-  var y2 = 50
-  var rowHeight2 = 125 // Row Letting
-  var colWidth2 = 100 // Column With
+push()
+translate(150,550)
+  var x2 = 100
+  var colWidth2 = 200
 textSize(24)
 fill(30)
 textStyle(BOLD)
 textAlign(LEFT)
  for (var c=1; c<table.getColumnCount(); c++){
-    text(table.columns[c], x2-colWidth2, y2)
-    y2 += rowHeight2
+    text(table.columns[c], x2-colWidth2, 0)
+    x2 += colWidth2
   }
+pop()
 
-push() //NYC 
-translate(250,25)
-stroke(0)
-fill(250)
-rect(0,0,50,50)
-//
-fill(150)
-rect(35,5,15,45)
-fill(100)
-rect(0,15,15,35)
-fill(200)
-rect(15,0,20,50)
-fill(50)
-rect(25,15,15,35)
-fill(250)
-rect(5,20,15,30)
+push() //NYC
+
+push()
+translate(20,250)
+strokeWeight(3)
+stroke(255);
+line(0, 0, 940, 0);
+pop()
+
+translate(100,250)
+
+ var WW = 100 // Column With
+ var XX = 150 // Align Left Column
+
+strokeWeight(1)
+stroke(255);
+fill('red')
+// tint() //Add opacity
+
+
+ for (var c=1; c<table.getColumnCount(); c++){
+ 	var NYCr = table.getNum(2, c)
+    ellipse(XX,0,NYCr/10)
+    XX += NYCr/20 // Width 1st circle - radius = align all left side
+	}
+
 pop()
 
 pop()
+
+
+
+
+
+
+
 
 
 }
