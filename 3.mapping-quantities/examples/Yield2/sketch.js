@@ -7,23 +7,21 @@ function preload(){
 function setup(){
 
 // Setting Canvas
- createCanvas(1080,1920)
- background(230)
+createCanvas(1900,850)
+background(250)
 
- var table = YieldTable
- print(table)
+var table = YieldTable
+print(table)
 
 ////SETTING DATA
+var rowHeight = 25 // Row Letting
+var colWidth = 100 // Column With
 
 // Typography
-  textFont("Helvetica Neue")
-  textSize(16)
-  fill(30)
-  noStroke()
-
-  var rowHeight = 25 // Row Letting
-  var colWidth = 100 // Column With
-
+fill(30)
+noStroke()
+textFont("Helvetica Neue")
+textSize(16)
 
 // Contries
   var x = 250 // Align Left Column
@@ -61,18 +59,18 @@ function setup(){
 push() // Plot Area
 translate(40,200)
 fill('pink')
-rect(0,0,1000,600)
+rect(0,0,1825,600)
 
-for (var Gridx = 0; Gridx < 1000; Gridx += 1000 / 20) {
-for (var Gridy = 0; Gridy < 600; Gridy += 600 / 10) {
+for (var Gridx = 0; Gridx < 1825; Gridx += 1825 / 24) {
+for (var Gridy = 0; Gridy < 600; Gridy += 600 / 12) {
 	stroke(250);
 	strokeWeight(1);
 	line(Gridx, 0, Gridx, 600);
-	line(0, Gridy, 1000, Gridy);
+	line(0, Gridy, 1825, Gridy);
 		}
 	}
 
-// Contries
+// Countries
 push()
 translate(150,550)
   var x2 = 100
@@ -110,19 +108,11 @@ fill('red')
  for (var c=1; c<table.getColumnCount(); c++){
  	var NYCr = table.getNum(2, c)
     ellipse(XX,0,NYCr/10)
-    XX += NYCr/20 // Width 1st circle - radius = align all left side
+    XX += NYCr/10// Width 1st circle - radius = align all left side
 	}
 
 pop()
 
 pop()
-
-
-
-
-
-
-
-
 
 }

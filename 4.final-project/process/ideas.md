@@ -1,21 +1,21 @@
 #### Potential project topics & questions
 
-1.
+1. # of Museums in Latin America per country
 
-2.
+2. # and information about motor vehicle crashes
 
-3.
+3. Drug related deaths
 
-4.
+4. NYC Airbnb analysis
 
-5.
+5. Kickstarter projects
 
-6.
+6. Popular baby names
 
-7.
+7. MLS Highest paid athletes
 
-8.
+8. Best artworks of all time analysis
 
-9.
+9. Song analysis spotify (genres, duration, etc.)
 
-10.
+10. World happiness report
