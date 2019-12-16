@@ -11,9 +11,9 @@ background (255)
 
 //Progress
 var Day = now.weekday
-var Daypos = map(Day, 1,7, 37.5,487.5)
-var DayX = now.progress.weekday
-var DayXpos = map(DayX, 0,0.1, 37.5,487.5)
+// var Daypos = map(Day, 1,7, 37.5,487.5)
+// var DayX = now.progress.weekday
+// var DayXpos = map(DayX, 0,0.1, 37.5,487.5)
 
 var mo = 37.5
 var tu = mo + 75
@@ -99,9 +99,4 @@ stroke(0)
 strokeWeight(5)
 line(DayXpos,25,DayXpos,3) // x1,y1,x2,y2
   
-  noStroke()
-  fill(0)
-  text('Today is the ' + Day, 20, 20);
-  text('The value of Day is ' + Day, 20, 30);
-//   //text('Today is the ' + Daypos, 50, 100);
 }
